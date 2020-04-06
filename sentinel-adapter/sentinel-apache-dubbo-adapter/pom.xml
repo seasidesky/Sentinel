@@ -18,10 +18,161 @@
         <apache.dubbo.version>2.7.5</apache.dubbo.version>
     </properties>
 
+    <profiles>
+        <profile>
+            <id>dubbo-2.7.3</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <apache.dubbo.version>2.7.3</apache.dubbo.version>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-antrun-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>copy target version filter</id>
+                                <phase>process-sources</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <configuration>
+                                    <tasks>
+                                        <move file="${project.basedir}/src/main/java/com/alibaba/csp/sentinel/adapter/dubbo/BaseSentinelDubboFilter.java" tofile="${project.basedir}/src/main/java/com/alibaba/csp/sentinel/adapter/dubbo/BaseSentinelDubboFilter.java.origin"/>
+                                        <copy file="${project.parent.basedir}/sentinel-apache-dubbo-adapter-compatible/sentinel-apache-dubbo-adapter-2.7.3/src/main/java/com/alibaba/csp/sentinel/adapter/dubbo/BaseSentinelDubboFilter.java"
+                                              tofile="${project.basedir}/src/main/java/com/alibaba/csp/sentinel/adapter/dubbo/BaseSentinelDubboFilter.java"/>
+                                    </tasks>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>restore current filter</id>
+                                <phase>compile</phase>
+                                <configuration>
+                                    <tasks>
+                                        <move file="${project.basedir}/src/main/java/com/alibaba/csp/sentinel/adapter/dubbo/BaseSentinelDubboFilter.java.origin" tofile="${project.basedir}/src/main/java/com/alibaba/csp/sentinel/adapter/dubbo/BaseSentinelDubboFilter.java"/>
+                                    </tasks>
+                                </configuration>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <artifactId>maven-jar-plugin</artifactId>
+                        <configuration>
+                            <classifier>2.7.3</classifier>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>dubbo-2.7.5</id>
+            <properties>
+                <apache.dubbo.version>2.7.5</apache.dubbo.version>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-antrun-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>copy target version filter</id>
+                                <phase>process-sources</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <configuration>
+                                    <tasks>
+                                        <move file="${project.basedir}/src/main/java/com/alibaba/csp/sentinel/adapter/dubbo/BaseSentinelDubboFilter.java" tofile="${project.basedir}/src/main/java/com/alibaba/csp/sentinel/adapter/dubbo/BaseSentinelDubboFilter.java.origin"/>
+                                        <copy file="${project.parent.basedir}/sentinel-apache-dubbo-adapter-compatible/sentinel-apache-dubbo-adapter-2.7.5/src/main/java/com/alibaba/csp/sentinel/adapter/dubbo/BaseSentinelDubboFilter.java"
+                                              tofile="${project.basedir}/src/main/java/com/alibaba/csp/sentinel/adapter/dubbo/BaseSentinelDubboFilter.java"/>
+                                    </tasks>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>restore current filter</id>
+                                <phase>compile</phase>
+                                <configuration>
+                                    <tasks>
+                                        <move file="${project.basedir}/src/main/java/com/alibaba/csp/sentinel/adapter/dubbo/BaseSentinelDubboFilter.java.origin" tofile="${project.basedir}/src/main/java/com/alibaba/csp/sentinel/adapter/dubbo/BaseSentinelDubboFilter.java"/>
+                                    </tasks>
+                                </configuration>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <artifactId>maven-jar-plugin</artifactId>
+                        <configuration>
+                            <classifier>2.7.5</classifier>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>dubbo-2.7.6</id>
+            <properties>
+                <apache.dubbo.version>2.7.6</apache.dubbo.version>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-antrun-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>copy target version filter</id>
+                                <phase>process-sources</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <configuration>
+                                    <tasks>
+                                        <move file="${project.basedir}/src/main/java/com/alibaba/csp/sentinel/adapter/dubbo/BaseSentinelDubboFilter.java" tofile="${project.basedir}/src/main/java/com/alibaba/csp/sentinel/adapter/dubbo/BaseSentinelDubboFilter.java.origin"/>
+                                        <copy file="${project.parent.basedir}/sentinel-apache-dubbo-adapter-compatible/sentinel-apache-dubbo-adapter-2.7.6/src/main/java/com/alibaba/csp/sentinel/adapter/dubbo/BaseSentinelDubboFilter.java"
+                                              tofile="${project.basedir}/src/main/java/com/alibaba/csp/sentinel/adapter/dubbo/BaseSentinelDubboFilter.java"/>
+                                    </tasks>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>restore current filter</id>
+                                <phase>compile</phase>
+                                <configuration>
+                                    <tasks>
+                                        <move file="${project.basedir}/src/main/java/com/alibaba/csp/sentinel/adapter/dubbo/BaseSentinelDubboFilter.java.origin" tofile="${project.basedir}/src/main/java/com/alibaba/csp/sentinel/adapter/dubbo/BaseSentinelDubboFilter.java"/>
+                                    </tasks>
+                                </configuration>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <artifactId>maven-jar-plugin</artifactId>
+                        <configuration>
+                            <classifier>2.7.6</classifier>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
     <dependencies>
         <dependency>
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-apache-dubbo-adapter-common</artifactId>
         </dependency>
         <dependency>
             <groupId>org.apache.dubbo</groupId>

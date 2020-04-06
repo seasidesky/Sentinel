@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>sentinel-adapter</artifactId>
+        <groupId>com.alibaba.csp</groupId>
+        <version>1.7.2-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>sentinel-apache-dubbo-adapter-compatible</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>sentinel-apache-dubbo-adapter-2.7.3</module>
+        <module>sentinel-apache-dubbo-adapter-2.7.5</module>
+        <module>sentinel-apache-dubbo-adapter-2.7.6</module>
+    </modules>
+
+    <properties>
+        <java.source.version>1.8</java.source.version>
+        <java.target.version>1.8</java.target.version>
+    </properties>
+
+
+</project>

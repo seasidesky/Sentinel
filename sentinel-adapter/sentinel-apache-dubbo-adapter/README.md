@@ -18,6 +18,36 @@ To use Sentinel Dubbo Adapter, you can simply add the following dependency to yo
 </dependency>
 ```
 
+from version 1.7.3 add classifier to specify which dubbo version to use, for example add the following dependency to use with dubbo 2.7.3
+```xml
+<dependency>
+    <groupId>com.alibaba.csp</groupId>
+    <artifactId>sentinel-apache-dubbo-adapter</artifactId>
+    <version>1.7.3</version>
+    <classifier>2.7.3</classifier>
+</dependency>
+```
+
+add the following dependency to use with dubbo 2.7.4, 2.7.4.1, 2.7.5
+```xml
+<dependency>
+    <groupId>com.alibaba.csp</groupId>
+    <artifactId>sentinel-apache-dubbo-adapter</artifactId>
+    <version>1.7.3</version>
+    <classifier>2.7.5</classifier>
+</dependency>
+```
+
+add the following dependency to use with dubbo 2.7.6 or higher
+```xml
+<dependency>
+    <groupId>com.alibaba.csp</groupId>
+    <artifactId>sentinel-apache-dubbo-adapter</artifactId>
+    <version>1.7.3</version>
+    <classifier>2.7.6</classifier>
+</dependency>
+```
+
 The Sentinel filters are **enabled by default**. Once you add the dependency,
 the Dubbo services and methods will become protected resources in Sentinel,
 which can leverage Sentinel's flow control and guard ability when rules are configured.
