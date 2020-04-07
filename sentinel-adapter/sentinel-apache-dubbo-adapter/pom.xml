@@ -71,6 +71,9 @@
         </profile>
         <profile>
             <id>dubbo-2.7.5</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <properties>
                 <apache.dubbo.version>2.7.5</apache.dubbo.version>
             </properties>

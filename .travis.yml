@@ -14,7 +14,10 @@ matrix:
 
 # https://docs.travis-ci.com/user/languages/java/#maven-dependency-management
 install:
-  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V -DminimumPriority=1
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V -DminimumPriority=1 -P dubbo-2.7.5
+  - cd $TRAVIS_BUILD_DIR/sentinel-adapter/sentinel-apache-dubbo-adapter
+  - mvn install -Dmaven.test.skip=true -Pdubbo-2.7.3
+  - mvn install -Dmaven.test.skip=true -Pdubbo-2.7.6
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)

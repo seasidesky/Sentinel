@@ -39,6 +39,7 @@
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-apache-dubbo-adapter</artifactId>
             <version>${project.version}</version>
+            <classifier>2.7.3</classifier>
         </dependency>
         <dependency>
             <groupId>com.alibaba.csp</groupId>
